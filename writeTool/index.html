@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>M5installer for ESP Web tools</title>
+    <script type="module" src="./esp-web-tools@9.4.1_ja/install-button.js?module"></script>
+</head>
+
+<body class="main">
+    <center>
+        <h1>M5Stack Basic用書き込みアプリ</h1>
+        ver 5.2.6 2023-12-14 Tatsuki Hayashi
+    </center>
+    <div>
+        <h2>ファームウェア アップロード</h2>
+        <form method="post" action="">
+            <input type="file" name="prgFile" required onclick="getElementById('upbtn').disabled = false;">
+            <input type="submit" id="upbtn" name="up-btn" value="送信" onclick="disabled = true;">
+        </form>
+    </div>
+
+    <div><br><br></div>
+
+    <h2>ファームウェア 書き込み</h2>
+    <div class="str">
+        <font style="color : #444444">IoT理科 計測用ファームウェア ver 2.3</font>
+        <esp-web-install-button manifest="manifest_iot.json">
+            <button type="button" class="write" slot="activate">書き込む</button>
+        </esp-web-install-button>
+    </div>
+
+    <br>
+
+    <div class="str">
+        <font style="color : #444444">IoT理科 計測用ファームウェア ver INA</font>
+        <esp-web-install-button manifest="manifest_iot_ina.json">
+            <button type="button" class="write" slot="activate">書き込む</button>
+        </esp-web-install-button>
+    </div>
+
+    <br>
+
+    <div class="str">
+        <font style="color : #444444">マジカルスプーン用ファームウェア ver. *</font>
+        <esp-web-install-button manifest="manifest_magical.json">
+            <button type="button" class="write" slot="activate">書き込む</button>
+        </esp-web-install-button>
+    </div>
+
+    <br>
+
+    <div>
+        <span class="child">
+            <font style="color : #444444">オリジナル M5Stack用プログラム</font>
+        </span>
+        <span id="orgPrg" class="child">
+            <!-- アップロードしたファイルが存在しない間は消える-->
+        </span>
+    </div>
+
+    <script type="module" src="src/postFile.js"></script>
+
+</body>

@@ -1,0 +1,28 @@
+{
+    "name": "IoT理科 伊那市対応",
+    "new_install_prompt_erase": true,
+    "builds": [
+        {
+            "chipFamily": "ESP32",
+            "improv": false,
+            "parts": [
+                {
+                    "path": "IoT_Science_INA/bootloader.bin",
+                    "offset": 4096
+                },
+                {
+                    "path": "IoT_Science_INA/partitions.bin",
+                    "offset": 32768
+                },
+                {
+                    "path": "IoT_Science_INA/boot_app0.bin",
+                    "offset": 57344
+                },
+                {
+                    "path": "IoT_Science_INA/firmware.bin",
+                    "offset": 65536
+                }
+            ]
+        }
+    ]
+}

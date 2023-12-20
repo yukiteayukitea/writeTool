@@ -1,0 +1,28 @@
+{
+    "name": "マジカルスプーン",
+    "new_install_prompt_erase": true,
+    "builds": [
+        {
+            "chipFamily": "ESP32",
+            "improv": false,
+            "parts": [
+                {
+                    "path": "Magical/bootloader.bin",
+                    "offset": 4096
+                },
+                {
+                    "path": "Magical/partitions.bin",
+                    "offset": 32768
+                },
+                {
+                    "path": "Magical/boot_app0.bin",
+                    "offset": 57344
+                },
+                {
+                    "path": "Magical/firmware.bin",
+                    "offset": 65536
+                }
+            ]
+        }
+    ]
+}

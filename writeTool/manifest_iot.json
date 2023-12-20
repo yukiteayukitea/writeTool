@@ -1,0 +1,28 @@
+{
+    "name": "IoT理科",
+    "new_install_prompt_erase": true,
+    "builds": [
+        {
+            "chipFamily": "ESP32",
+            "improv": false,
+            "parts": [
+                {
+                    "path": "IoT_Science/bootloader.bin",
+                    "offset": 4096
+                },
+                {
+                    "path": "IoT_Science/partitions.bin",
+                    "offset": 32768
+                },
+                {
+                    "path": "IoT_Science/boot_app0.bin",
+                    "offset": 57344
+                },
+                {
+                    "path": "IoT_Science/main.bin",
+                    "offset": 65536
+                }
+            ]
+        }
+    ]
+}
